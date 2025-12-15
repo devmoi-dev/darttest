@@ -9,7 +9,7 @@ void main(List<String> arguments) {
 
 
 void testLogin() async {
-  final result = await login(username: 'testuser', password: 'testpass');
+  final result = await login(username: 'a', password: '123');
   if (result['success']) {
     print('Login successful! Token: ${result['token']}');
   } else {
@@ -29,7 +29,7 @@ void testLogin() async {
 
  
 
-    final url = Uri.parse("127.0.0.1:8000/api-token-auth/");
+    final url = Uri.parse("http://127.0.0.1:8000/api-token-auth/");
 
     try {
       final response = await http.post(
